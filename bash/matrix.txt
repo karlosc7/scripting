@@ -1,0 +1,12 @@
+@echo off 
+::title Bucle de ejemplo 
+color 0A 
+:bucle
+echo %random%%random%%random%
+%random%%random%%random%
+%random%%random%%random%
+%random%%random%%random%
+%random%%random%%random%
+%random%%random%%random%
+goto bucle
+exit
