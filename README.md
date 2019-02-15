@@ -1,16 +1,27 @@
-# scripting
+# Scripting
 En este repositorio encontrarás ejemplos básicos de scripting con bash y batch
-# ¿qué debes saber? :books:
+
+# ¿Qué debes saber? :books:
 Un script es un programa almacenado como texto plano. Estos lenguajes son interpretados, esto quiere decir que son lenguajes de consola de comandos y el sistema interpreta sus instrucciones.
 
 # Índice :mag:
   - [Introducción](#introduccion)
-  - [Introducción](#Primera-linea-de-nuestro-programa)
+  - [Primera línea de código](#Primera-linea-de-nuestro-programa)
   - [Sintaxis](#sintaxis)
   - [Interfaz](#interfaz)
   - [Links](#links)
   
 ## Introducción  
+
+En estas líneas se explicará cómo crear pequeños scripts con bash.
+
+## Variables
+
+    Var                                     | 
+    --------------------------------------- | 
+    Entendemos variable como caja o almacén | 
+    MENSAJE="Hola Mundo"                    |
+    echo $MENSAJE                           |
 
 ## Primera línea de nuestro programa
 
@@ -19,6 +30,14 @@ Esto es lo primero que debemos escribir en el encabezamiento para que lo identif
 
 
 ## Sintaxis
+
+# Estructuras de control y bucles
+
+    Condición               | Bucles                | Selección
+    ---------------------   | --------------------- |------------------
+    If / else               | For                   | Select    
+    Until                   | While                 | Case
+    
 
 Los guiones de Bash reciben los argumentos que le pasa la shell como $1, $2, ..., $n. Se puede obtener el número total de argumentos con el símbolo $#.
 
@@ -111,6 +130,26 @@ La sintaxis de expresiones regulares es la misma que documenta la página de man
          echo ${BASH_REMATCH[2]} -- outputs: etch
  fi
 
+
+Comprobacion De Atributos De Fichero
+Operador		Verdad (TRUE) si:
+------------------------------------------
+-d fichero		fichero existe y es un directorio
+-e fichero		fichero existe
+-f fichero		fichero existe y es un fichero regular (no un
+			directorio, u otro tipo de fichero especial)
+
+-r fichero		Tienes permiso de lectura en fichero
+-s fichero		fichero existe y no esta vacio
+-w fichero		Tienes permiso de escritura en fichero
+-x fichero		Tienes permiso de ejecucion en fichero (o de busqueda
+			si es un directorio)
+
+-O fichero		Eres el dueño del fichero
+-G fichero		El grupo del fichero es igual al tuyo.
+
+fichero1 -nt fichero2	fichero1 es mas reciente que fichero2
+fichero1 -ot fichero2	fichero1 es mas antiguo que fichero2
 
 ## Programador
 
